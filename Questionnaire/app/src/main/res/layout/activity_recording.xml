@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".RecordingActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:elevation="4dp"
+            android:gravity="end"
+            android:background="@android:color/white"
+            android:id="@+id/menuBar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            app:contentInsetStart="16dp"
+            app:contentInsetEnd="0dp">
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:padding="8dp"
+                android:layout_gravity="end"
+                android:id="@+id/deleteImgView"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_delete_white_24dp"
+                android:scaleType="fitXY"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:padding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:layout_gravity="end"
+                android:id="@+id/uploadImgView"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_file_upload_white_24dp"
+                android:scaleType="fitXY"/>
+
+            <ImageView
+                android:padding="8dp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="end"
+                android:id="@+id/recordingImgView"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_video_call_white_24dp"
+                android:scaleType="fitXY"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v7.widget.RecyclerView
+            app:layout_constraintTop_toBottomOf="@+id/menuBar"
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
